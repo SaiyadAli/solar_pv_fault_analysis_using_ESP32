@@ -5,8 +5,8 @@
 
 WebServer server(80);
 
-const char* ssid = "Ishani";
-const char* password = "1234";
+const char* ssid = "username"; //enter the network username
+const char* password = "password"; //enter network password
 int PANEL_PIN_34 = 34; // Pin for panel 1
 int PANEL_PIN_35 = 35; // Pin for panel 2
 #define MAX_FAULTS 5
@@ -30,7 +30,7 @@ void setup() {
 
   connectToWifi();
 
-  timeClient.setTimeOffset(19800); // Set time offset to adjust to local time zone
+  timeClient.setTimeOffset(19800); // Set time offset to adjust to local time zone in india it is 19800
   timeClient.begin(); // Initialize NTP client
 
   beginServer();
